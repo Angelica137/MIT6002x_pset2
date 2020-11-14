@@ -1,4 +1,6 @@
-# Simulation Overview
+# Cleaning robots
+
+## Simulation Overview
 
 iRobot is a company (started by MIT alumni and faculty) that sells the Roomba vacuuming robot (watch one of the product videos to see these robots in action). Roomba robots move around the floor, cleaning the area they pass over.
 
@@ -35,3 +37,17 @@ Here are additional details about the simulation model. Read these carefully.
 
 - **Termination**
   The simulation ends when a specified fraction of the tiles in the room have been cleaned.
+
+## Getting Started
+
+The below documents have been provided:
+
+- ps2.py, a skeleton of the solution.
+
+- ps2_visualize.py, code to help you visualize the robot's movement (an optional - but cool! - part of this problem set).
+
+- ps2_verify_movement35.pyc, precompiled module for Python 3.5 that assists with the visualization code. In ps2.py you will uncomment this out if you have Python 3.5.
+
+- ps2_verify_movement36.pyc, precompiled module for Python 3.6 that assists with the visualization code. In ps2.py you will uncomment this out if you have Python 3.6.
+
+- ps2_verify_movement37.pyc, precompiled module for Python 3.7 that assists with the visualization code. In ps2.py you will uncomment this out if you have Python 3.7.
