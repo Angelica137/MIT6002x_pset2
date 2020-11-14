@@ -8,4 +8,4 @@ The following simplified model of a single robot moving in a square 5x5 room sho
 
 The robot starts out at some random position in the room, and with a random direction of motion. The illustrations below show the robot's position (indicated by a black dot) as well as its direction (indicated by the direction of the red arrowhead).
 
-![Image of 5x5 room](/Users/Angelica/Documents/Coding/ComputerScience/MIT_6002X/Unit_2/MIT6002x_pset2/Screenshot 2020-11-14 at 17.04.01.png)
+![Image of 5x5 room](/Users/Angelica/Documents/Coding/ComputerScience/MIT_6002X/Unit_2/MIT6002x_pset2/diagram.png)
