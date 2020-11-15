@@ -140,6 +140,11 @@ class RectangularRoom(object):
 
         returns: an integer
         """
+        clean_tiles = 0
+        for key in self.tiles:
+            if self.tiles[key] == True:
+                clean_tiles += 1
+        return clean_tiles
 
     def getRandomPosition(self):
         """
