@@ -226,7 +226,7 @@ class Robot(object):
 
         direction: integer representing an angle in degrees
         """
-        raise NotImplementedError
+        self.dir = direction
 
     def updatePositionAndClean(self):
         """
