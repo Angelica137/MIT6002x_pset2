@@ -103,7 +103,12 @@ class RectangularRoom(object):
 
         pos: a Position
         """
-        raise NotImplementedError
+        x = math.floor(pos.getX())
+        y = math.floor(pos.getY())
+        for key in self.tiles:
+            if key.getX() == x and key.getY() == y
+            self.tiles[key] = True
+            break
 
     def isTileCleaned(self, m, n):
         """
