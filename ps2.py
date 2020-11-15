@@ -84,7 +84,8 @@ class RectangularRoom(object):
         width: an integer > 0
         height: an integer > 0
         """
-        self.witdh = width
+        self.width * self.height
+        return total_tiles = width
         self.height = height
         # an array conatiner the xy coordinates of each tile using the Position class
         tile_positions = []
@@ -130,7 +131,8 @@ class RectangularRoom(object):
 
         returns: an integer
         """
-        raise NotImplementedError
+        total_tiles = self.width * self.height
+        return total_tiles
 
     def getNumCleanedTiles(self):
         """
