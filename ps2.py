@@ -201,7 +201,7 @@ class Robot(object):
 
         returns: a Position object giving the robot's position.
         """
-        raise NotImplementedError
+        return self.pos
 
     def getRobotDirection(self):
         """
