@@ -84,7 +84,8 @@ class RectangularRoom(object):
         width: an integer > 0
         height: an integer > 0
         """
-        raise NotImplementedError
+        self.witdh = width
+        self.height = height
 
     def cleanTileAtPosition(self, pos):
         """
