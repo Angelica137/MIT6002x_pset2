@@ -218,7 +218,7 @@ class Robot(object):
 
         position: a Position object.
         """
-        raise NotImplementedError
+        self.pos = position
 
     def setRobotDirection(self, direction):
         """
