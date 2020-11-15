@@ -109,3 +109,9 @@ Ordinarily we would consider putting all the robot's methods in a single class. 
 We have already refactored the robot code for you into two classes: the Robot class you completed in Problem 2 (which contains general robot code), and a StandardRobot class that inherits from it (which contains its own movement strategy).
 
 Complete the updatePositionAndClean method of StandardRobot to simulate the motion of the robot after a single time-step (as described on the Simulation Overview page).
+
+We have provided the getNewPosition method of Position, which you may find helpful.
+
+**Note:** You can pass in an integer or a float for the angle parameter.
+
+Before moving on to Problem 4, check that your implementation of StandardRobot works by uncommenting the following line under your implementation of StandardRobot. Make sure that as your robot moves around the room, the tiles it traverses switch colors from gray to white. It should take about a minute for it to clean all the tiles.
