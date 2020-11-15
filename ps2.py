@@ -84,8 +84,7 @@ class RectangularRoom(object):
         width: an integer > 0
         height: an integer > 0
         """
-        self.width * self.height
-        return total_tiles = width
+        self.width = width
         self.height = height
         # an array conatiner the xy coordinates of each tile using the Position class
         tile_positions = []
@@ -94,7 +93,7 @@ class RectangularRoom(object):
                 tile_positions.append(Position(i, j))
         # a dictionary marking cleaned tiles
         is_clean = {}
-        self.tiles = self.tiles.fromkeys(tile_positions, False)
+        self.is_clean = self.is_clean.fromkeys(tile_positions, False)
 
     def cleanTileAtPosition(self, pos):
         """
@@ -106,9 +105,9 @@ class RectangularRoom(object):
         """
         x = math.floor(pos.getX())
         y = math.floor(pos.getY())
-        for key in self.tiles:
+        for key in self.is_clean:
             if key.getX() == x and key.getY() == y:
-                self.tiles[key] = True
+                self.is_clean[key] = True
                 break
 
     def isTileCleaned(self, m, n):
@@ -121,9 +120,9 @@ class RectangularRoom(object):
         n: an integer
         returns: True if (m, n) is cleaned, False otherwise
         """
-        for key in self.tiles:
+        for key in self.is_clean:
             if key.getX() == math.floor(m) and key.getY() == math.floor(n):
-                return self.tiles[key] == True
+                return self.is_clean[key] == True
 
     def getNumTiles(self):
         """
@@ -141,8 +140,8 @@ class RectangularRoom(object):
         returns: an integer
         """
         clean_tiles = 0
-        for key in self.tiles:
-            if self.tiles[key] == True:
+        for key in self.is_clean:
+            if self.is_clean[key] == True:
                 clean_tiles += 1
         return clean_tiles
 
@@ -163,9 +162,13 @@ class RectangularRoom(object):
         pos: a Position object.
         returns: True if pos is in the room, False otherwise.
         """
-
+        x = pos.getX()
+        y = pos.getY()
+        return x < self.width and x >= 0 and y < self.height and y >= 0
 
 # === Problem 2
+
+
 class Robot(object):
     """
     Represents a robot cleaning a particular room.
