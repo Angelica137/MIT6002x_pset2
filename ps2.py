@@ -92,8 +92,8 @@ class RectangularRoom(object):
             for j in range(height):
                 tile_positions.append(Position(i, j))
         # a dictionary marking cleaned tiles
-        is_clean = {}
-        self.is_clean = self.is_clean.fromkeys(tile_positions, False)
+        self.clean_tiles = {}
+        self.clean_tiles = self.clean_tiles.fromkeys(tile_positions, False)
 
     def cleanTileAtPosition(self, pos):
         """
@@ -105,9 +105,9 @@ class RectangularRoom(object):
         """
         x = math.floor(pos.getX())
         y = math.floor(pos.getY())
-        for key in self.is_clean:
+        for key in self.clean_tiles:
             if key.getX() == x and key.getY() == y:
-                self.is_clean[key] = True
+                self.clean_tiles[key] = True
                 break
 
     def isTileCleaned(self, m, n):
@@ -120,9 +120,9 @@ class RectangularRoom(object):
         n: an integer
         returns: True if (m, n) is cleaned, False otherwise
         """
-        for key in self.is_clean:
+        for key in self.clean_tiles:
             if key.getX() == math.floor(m) and key.getY() == math.floor(n):
-                return self.is_clean[key] == True
+                return self.clean_tiles[key] == True
 
     def getNumTiles(self):
         """
@@ -140,8 +140,8 @@ class RectangularRoom(object):
         returns: an integer
         """
         clean_tiles = 0
-        for key in self.is_clean:
-            if self.is_clean[key] == True:
+        for key in self.clean_tiles:
+            if self.clean_tiles[key] == True:
                 clean_tiles += 1
         return clean_tiles
 
