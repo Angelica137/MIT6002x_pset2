@@ -210,7 +210,7 @@ class Robot(object):
         returns: an integer d giving the direction of the robot as an angle in
         degrees, 0 <= d < 360.
         """
-        raise NotImplementedError
+        return self.dir
 
     def setRobotPosition(self, position):
         """
