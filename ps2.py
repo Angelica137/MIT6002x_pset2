@@ -106,9 +106,9 @@ class RectangularRoom(object):
         x = math.floor(pos.getX())
         y = math.floor(pos.getY())
         for key in self.tiles:
-            if key.getX() == x and key.getY() == y
-            self.tiles[key] = True
-            break
+            if key.getX() == x and key.getY() == y:
+                self.tiles[key] = True
+                break
 
     def isTileCleaned(self, m, n):
         """
@@ -120,7 +120,9 @@ class RectangularRoom(object):
         n: an integer
         returns: True if (m, n) is cleaned, False otherwise
         """
-        raise NotImplementedError
+        for key in self.tiles:
+            if key.getX() == math.floor(m) and key.getY() == math.floor(n):
+                return self.tiles[key] == True
 
     def getNumTiles(self):
         """
