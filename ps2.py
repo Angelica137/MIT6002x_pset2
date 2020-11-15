@@ -86,7 +86,7 @@ class RectangularRoom(object):
         """
         self.width = width
         self.height = height
-        # an array conatiner the xy coordinates of each tile using the Position class
+        # an array conatining the xy coordinates of each tile using the Position class
         tile_positions = []
         for i in range(width):
             for j in range(height):
