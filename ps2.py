@@ -86,6 +86,14 @@ class RectangularRoom(object):
         """
         self.witdh = width
         self.height = height
+        # an array conatiner the xy coordinates of each tile using the Position class
+        tile_positions = []
+        for i in range(width):
+            for j in range(height):
+                tile_positions.append(Position(i, j))
+        # a dictionary marking cleaned tiles
+        is_clean = {}
+        self.tiles = self.tiles.fromkeys(tile_positions, False)
 
     def cleanTileAtPosition(self, pos):
         """
@@ -123,7 +131,6 @@ class RectangularRoom(object):
 
         returns: an integer
         """
-        raise NotImplementedError
 
     def getRandomPosition(self):
         """
@@ -131,7 +138,6 @@ class RectangularRoom(object):
 
         returns: a Position object.
         """
-        raise NotImplementedError
 
     def isPositionInRoom(self, pos):
         """
@@ -140,7 +146,6 @@ class RectangularRoom(object):
         pos: a Position object.
         returns: True if pos is in the room, False otherwise.
         """
-        raise NotImplementedError
 
 
 # === Problem 2
