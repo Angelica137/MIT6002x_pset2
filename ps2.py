@@ -189,7 +189,11 @@ class Robot(object):
         room:  a RectangularRoom object.
         speed: a float (speed > 0)
         """
-        raise NotImplementedError
+        self.room = room
+        self.speed = speed
+        # i have called this pos as how they called it above
+        self.pos = room.getRandomPosition()
+        self.dir = random.choice(range(360))
 
     def getRobotPosition(self):
         """
