@@ -152,6 +152,9 @@ class RectangularRoom(object):
 
         returns: a Position object.
         """
+        x = random.choice(range(self.width))
+        y = random.choice(range(self.height))
+        return Position(x, y)
 
     def isPositionInRoom(self, pos):
         """
