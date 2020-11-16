@@ -193,3 +193,44 @@ iRobot is testing out a new robot design. The proposed new robots differ in that
 Write a new class RandomWalkRobot that inherits from Robot (like StandardRobot) but implements the new movement strategy. RandomWalkRobot should have the same interface as StandardRobot.
 
 Test out your new class. Perform a single trial with the StandardRobot implementation and watch the visualization to make sure it is doing the right thing. Once you are satisfied, you can call runSimulation again, passing RandomWalkRobot instead of StandardRobot.
+
+### Problem 6: Data Plotting
+
+Now, you'll use your simulation to answer some questions about the robots' performance.
+
+In order to do this problem, you will be using a Python tool called PyLab.
+
+Below is an example of a plot. This plot does not use the same axes that your plots will use; it merely serves as an example of the types of images that the PyLab package produces.
+
+Note to those who did the optional visualization: For problem 6, we make calls to runSimulation() to get simulation data and plot it. However, you don't want the visualization getting in the way. If you chose to do the visualization exercise, before you get started on problem 6 (and before you submit your code in submission boxes), make sure to comment the visualization code out of runSimulation(). There should be 3 lines to comment out. If you do not comment these lines, your code will take a REALLY long time to run!!
+
+For the questions below, call the given function with the proper arguments to generate a plot using PyLab.
+
+**Problem 6-1**
+
+Examine showPlot1 in ps2.py, which takes in the parameters title, x_label, and y_label. Your job is to examine the code and figure out what the plot produced by the function tells you. Try calling showPlot1 with appropriate arguments to produce a few plots. Then, answer the following 3 questions.
+
+Which of the following would be the best title for the graph?
+
+- Percentage Of Room That A Robot Cleans
+- Time It Takes 1 - 10 Robots To Clean 70% Of A Room
+- Percentage Of Room That 1 - 10 Robots Clean
+- Time It Takes 1 - 10 Robots To Clean 80% Of A Room
+- Time For Robots To Clean Varying Percentages Of A Room
+- Area Of Room That 1 - 10 Robots Clean
+
+Which of the following would be the best x-axis label for the graph?
+
+- Time-steps
+- Percentage Cleaned
+- Aspect Ratio
+- Number of Robots
+- Distance Travelled
+
+Which of the following would be the best y-axis label for the graph?
+
+- Time-steps
+- Percentage Cleaned
+- Aspect Ratio
+- Number of Robots
+- Distance Travelled
