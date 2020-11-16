@@ -144,5 +144,3 @@ Three robots take around 1105 clock ticks to completely clean a 20x20 room.
 You should also check your simulation's output for speeds other than 1.0. One way to do this is to take the above test cases, change the speeds, and make sure the results are sensible.
 
 For further testing, see the next page in this problem set about the optional way to use visualization methods. Visualization will help you see what's going on in the simulation and may assist you in debugging your code.
-
-Enter your code for the definition of runSimulation below.
