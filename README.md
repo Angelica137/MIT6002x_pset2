@@ -43,13 +43,9 @@ Here are additional details about the simulation model. Read these carefully.
 The below documents have been provided:
 
 - ps2.py, a skeleton of the solution.
-
 - ps2_visualize.py, code to help you visualize the robot's movement (an optional - but cool! - part of this problem set).
-
 - ps2_verify_movement35.pyc, precompiled module for Python 3.5 that assists with the visualization code. In ps2.py you will uncomment this out if you have Python 3.5.
-
 - ps2_verify_movement36.pyc, precompiled module for Python 3.6 that assists with the visualization code. In ps2.py you will uncomment this out if you have Python 3.6.
-
 - ps2_verify_movement37.pyc, precompiled module for Python 3.7 that assists with the visualization code. In ps2.py you will uncomment this out if you have Python 3.7.
 
 ## Problem 1: RectangularRoom Class
@@ -144,3 +140,39 @@ Three robots take around 1105 clock ticks to completely clean a 20x20 room.
 You should also check your simulation's output for speeds other than 1.0. One way to do this is to take the above test cases, change the speeds, and make sure the results are sensible.
 
 For further testing, see the next page in this problem set about the optional way to use visualization methods. Visualization will help you see what's going on in the simulation and may assist you in debugging your code.
+
+# Optional: Visualizing Robots
+
+### Visualizing Robots
+
+Note: This part is optional. It is cool and very easy to do, and may also be useful for debugging. Be sure to comment out all visualization parts of your code before submitting.
+
+We've provided some code to generate animations of your robots as they go about cleaning a room. These animations can also help you debug your simulation by helping you to visually determine when things are going wrong.
+
+Here's how to run the visualization:
+
+- In your simulation, at the beginning of a trial, insert the following code to start an animation:
+
+```
+anim = ps2_visualize.RobotVisualization(num_robots, width, height)
+```
+
+(Pass in parameters appropriate to the trial, of course.) This will open a new window to display the animation and draw a picture of the room.
+
+- Then, during each time-step, before the robot(s) move, insert the following code to draw a new frame of the animation:
+
+```
+anim.update(room, robots)
+```
+
+where room is a RectangularRoom object and robots is a list of Robot objects representing the current state of the room and the robots in the room.
+
+- When the trial is over, call the following method:
+
+```
+anim.done()
+```
+
+The resulting animation will look like this:
+
+![Image of 5x5 room](/Users/Angelica/Documents/Coding/ComputerScience/MIT_6002X/Unit_2/MIT6002x_pset2/RobotVisualisation.png)
